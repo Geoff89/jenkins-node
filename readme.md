@@ -1,4 +1,7 @@
-```docker run  -d --name jenkins-docker \
+#### A Guide of using Jenkins CI/CD pipeline with docker and nodejs.
+
+```
+   docker run  -d --name jenkins-docker \
    -p 8080:8080 -p 50000:50000 \
    -v /var/run/docker.sock:/var/run/docker.sock \
    -v /usr/bin/docker:/usr/bin/docker
