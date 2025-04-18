@@ -1,0 +1,15 @@
+{
+  "name": "jenkinsnodejs",
+  "version": "1.0.0",
+  "description": "```docker run  -d --name jenkins-docker \\    -p 8080:8080 -p 50000:50000 \\    -v /var/run/docker.sock:/var/run/docker.sock \\    -v /usr/bin/docker:/usr/bin/docker    -u root    -e DOCKER_GID=$(getent group docker | cut -d: -f3) \\    jenkins/jenkins:lts ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
