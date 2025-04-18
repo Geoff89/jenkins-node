@@ -1,14 +1,15 @@
-const express = require('express');
-
-const app = express();
-
-app.use(express.json());
-
-app.get('/api/data', (req, res) => {
-    res.json({ message: 'Docker backend!' });
-});
-
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+const express = require('express')
+const app = express()
+const port = 3000
+app.use(express.json())
+app.get('/', (req, res) => {
+  res.json({message: 'Hello CodeBuild!'})
+})
+let server = app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})
+function stop() {
+  server.close();
+}
+module.exports = server;
+module.exports.stop = stop;
